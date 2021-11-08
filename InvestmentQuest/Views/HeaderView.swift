@@ -12,7 +12,8 @@ struct HeaderView: View {
         VStack{
             Text("Investment Quest")
                 .fontWeight(.semibold)
-                .font(.title).padding(10)
+                .font(.title)
+                .padding(10)
         }.frame(
             minWidth: 0,
             maxWidth: .infinity,

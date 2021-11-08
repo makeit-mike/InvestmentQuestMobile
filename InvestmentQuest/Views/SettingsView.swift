@@ -11,9 +11,10 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             VStack{
+                // To Do: Build a Settings model that houses all "Settings" These are just place holders.
                 SimpleList(textItems: ["Notifications","Location","Fetch Results Hourly","Auto-Bid","Color theme","Icon","Contact","About" ] )
                 Spacer()
-            }.background(Color(red: 1.0, green: 1.0, blue: 1.0, opacity: 0.145).edgesIgnoringSafeArea(.all))
+            }.background(Stocks_GrayBackground)
         }.navigationTitle("Settings")
     }
 }

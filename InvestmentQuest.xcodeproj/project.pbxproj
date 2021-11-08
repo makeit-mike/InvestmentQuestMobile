@@ -52,6 +52,12 @@
 		58FBB0362738CAE700F9407B /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBB0352738CAE700F9407B /* FooterView.swift */; };
 		58FBB0372738CAE700F9407B /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBB0352738CAE700F9407B /* FooterView.swift */; };
 		58FBB0382738CAE700F9407B /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBB0352738CAE700F9407B /* FooterView.swift */; };
+		58FBB03A2738CDA100F9407B /* ColorValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBB0392738CDA100F9407B /* ColorValue.swift */; };
+		58FBB03B2738CDA100F9407B /* ColorValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBB0392738CDA100F9407B /* ColorValue.swift */; };
+		58FBB03C2738CDA100F9407B /* ColorValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBB0392738CDA100F9407B /* ColorValue.swift */; };
+		58FBB03E2738D98800F9407B /* HSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBB03D2738D98800F9407B /* HSpacer.swift */; };
+		58FBB03F2738D98800F9407B /* HSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBB03D2738D98800F9407B /* HSpacer.swift */; };
+		58FBB0402738D98800F9407B /* HSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBB03D2738D98800F9407B /* HSpacer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +100,8 @@
 		58FBB02D2738CA1100F9407B /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
 		58FBB0312738CAE000F9407B /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		58FBB0352738CAE700F9407B /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		58FBB0392738CDA100F9407B /* ColorValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorValue.swift; sourceTree = "<group>"; };
+		58FBB03D2738D98800F9407B /* HSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSpacer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				58FBB02D2738CA1100F9407B /* StockModel.swift */,
+				58FBB0392738CDA100F9407B /* ColorValue.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				58FBB00A2738B41F00F9407B /* InvestView.swift */,
+				58FBB03D2738D98800F9407B /* HSpacer.swift */,
 			);
 			path = Panels;
 			sourceTree = "<group>";
@@ -369,6 +379,7 @@
 			files = (
 				58FBB00727389DD500F9407B /* StocksViewModel.swift in Sources */,
 				58FBB0362738CAE700F9407B /* FooterView.swift in Sources */,
+				58FBB03A2738CDA100F9407B /* ColorValue.swift in Sources */,
 				58FBB00B2738B41F00F9407B /* InvestView.swift in Sources */,
 				58FBAFC0273843E700F9407B /* StocksView.swift in Sources */,
 				58FBB0212738BA1400F9407B /* HomeView.swift in Sources */,
@@ -380,6 +391,7 @@
 				58FBB0252738BA5E00F9407B /* PortfolioView.swift in Sources */,
 				58FBB01D2738B8DD00F9407B /* SimpleList.swift in Sources */,
 				58FBB0192738B64B00F9407B /* UserInfoTextInputVM.swift in Sources */,
+				58FBB03E2738D98800F9407B /* HSpacer.swift in Sources */,
 				58FBB0322738CAE000F9407B /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +402,7 @@
 			files = (
 				58FBB00827389DD500F9407B /* StocksViewModel.swift in Sources */,
 				58FBB0372738CAE700F9407B /* FooterView.swift in Sources */,
+				58FBB03B2738CDA100F9407B /* ColorValue.swift in Sources */,
 				58FBB00C2738B41F00F9407B /* InvestView.swift in Sources */,
 				58FBAFC1273843E700F9407B /* StocksView.swift in Sources */,
 				58FBB0222738BA1400F9407B /* HomeView.swift in Sources */,
@@ -401,6 +414,7 @@
 				58FBB0262738BA5E00F9407B /* PortfolioView.swift in Sources */,
 				58FBB01E2738B8DD00F9407B /* SimpleList.swift in Sources */,
 				58FBB01A2738B64B00F9407B /* UserInfoTextInputVM.swift in Sources */,
+				58FBB03F2738D98800F9407B /* HSpacer.swift in Sources */,
 				58FBB0332738CAE000F9407B /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,11 +430,13 @@
 				58FBB0122738B5E600F9407B /* UserInfoTextInputView.swift in Sources */,
 				58FBB00127388D8E00F9407B /* SearchView.swift in Sources */,
 				58FBB01F2738B8DD00F9407B /* SimpleList.swift in Sources */,
+				58FBB03C2738CDA100F9407B /* ColorValue.swift in Sources */,
 				58FBB0232738BA1400F9407B /* HomeView.swift in Sources */,
 				58FBAF9F273842EA00F9407B /* InvestmentQuestUITestsLaunchTests.swift in Sources */,
 				58FBB0272738BA5E00F9407B /* PortfolioView.swift in Sources */,
 				58FBAFC2273843E700F9407B /* StocksView.swift in Sources */,
 				58FBB01B2738B64B00F9407B /* UserInfoTextInputVM.swift in Sources */,
+				58FBB0402738D98800F9407B /* HSpacer.swift in Sources */,
 				58FBAF9D273842EA00F9407B /* InvestmentQuestUITests.swift in Sources */,
 				58FBB00927389DD500F9407B /* StocksViewModel.swift in Sources */,
 				58FBB0342738CAE000F9407B /* HeaderView.swift in Sources */,

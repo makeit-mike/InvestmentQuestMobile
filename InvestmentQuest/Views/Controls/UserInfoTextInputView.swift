@@ -15,7 +15,7 @@ struct UserInfoTextInputView: View {
             Text(viewResponse)
             Spacer()
             TextField(" ", text: $text)
-                .background(.black.opacity(0.1))
+                .background(Stocks_UserInputBackGround)
                 .cornerRadius(7)
                 .frame(width: 150, alignment: .trailing)
         }.frame(alignment: .leading).padding()

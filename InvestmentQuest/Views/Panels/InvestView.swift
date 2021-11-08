@@ -38,7 +38,7 @@ struct InvestView: View {
             HStack{
                 Text("Number of stock:").padding()
                 Spacer()
-                NumberPicker().padding(.trailing).padding(.leading).background(.black.opacity(0.1)).cornerRadius(10).frame(width: 170)
+                NumberPicker().padding(.trailing).padding(.leading).background(Stocks_UserInputBackGround).cornerRadius(10).frame(width: 170)
                 //Num shares use var
             }
             HStack{

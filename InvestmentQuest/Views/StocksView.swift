@@ -17,11 +17,17 @@ struct StocksView: View {
                     SettingsView()
                 case .Search:
                     SearchView()
+                case .Portfolio:
+                    PortfolioView()
                 default:
                     HomeView()
                 }
                 FooterView(vm:vm)
-            }.padding(10).background(Color(red: 1.0, green: 1.0, blue: 1.0, opacity: 0.145)).foregroundColor(.white).preferredColorScheme(.dark)
+            }
+            .padding(10)
+            .background(Stocks_GrayBackground)
+            .foregroundColor(.white)
+            .preferredColorScheme(.dark)
         }.environmentObject(vm)
     }
 }

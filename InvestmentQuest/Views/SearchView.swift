@@ -21,7 +21,7 @@ struct SearchView: View {
                     StockSearchResults(vm: vm)
                 }
                 Spacer()
-            }.background(Color(red: 1.0, green: 1.0, blue: 1.0, opacity: 0.145).edgesIgnoringSafeArea(.all))
+            }.background(Stocks_GrayBackground)
         }.navigationTitle("Search")
     }
 }
@@ -85,8 +85,8 @@ struct StockSearchResults: View {
     @State private var showInvestView: Bool = false
     
     var body: some View {
-        SimpleList(textItems: ["Stock Price: $\(vm.stockPrice)", "Estimated Growth: \(vm.stockGrowth)%", "Shareholders: \(vm.stockShareHolders)"])
-        
+        SimpleList(textItems: StockInfo(vm: vm))
+
         HStack {
             Spacer()
             Button(action: {self.showInvestView.toggle()}) {

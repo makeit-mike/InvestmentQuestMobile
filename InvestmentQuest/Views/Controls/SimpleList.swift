@@ -15,7 +15,9 @@ struct SimpleList: View {
                 Text(i).foregroundColor(.white)
                 Divider().background(.black).padding(0)
             }
-        }.padding().background(Color(red: 100 / 255, green: 100 / 255, blue: 100 / 255)).cornerRadius(15)
+        }.padding()
+            .background(ColorVal(r: 100, g: 100, b: 100))
+        .cornerRadius(15)
     }
 }
 

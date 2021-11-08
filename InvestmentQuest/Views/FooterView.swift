@@ -12,29 +12,31 @@ struct FooterView: View {
     
     var body: some View {
         VStack{
+            Divider().background(.black)
             HStack{
                 ForEach(NavButtons) { btn in
                     Button(action: {vm.SwitchView(itemView: btn.navPath)}) {
                         VStack {
                             Image(systemName: btn.navIcon)
-                                .font(.title).frame(width: 35, height: 35)
+                                .font(.caption2).frame(width: 15, height: 15)
                             Text(btn.navName)
                                 .fontWeight(.light)
                                 .font(.caption)
-                        }.frame(width: 50, height: 50, alignment: .top)
-                            .padding(10)
-                            .foregroundColor(.white)
-                            .background(Color.gray)
-                            .cornerRadius(20)
+                        }.frame(width: 50, height: 35, alignment: .top)
+                            .padding()
+                            .cornerRadius(7)
                     }
                 }
             }.font(.title2)
-        }.frame(
+        }
+        .frame(
             minWidth: 0,
             maxWidth: .infinity,
             minHeight: 0,
             maxHeight: 50,
             alignment: .center
-        ).opacity(0.6)
+        ).opacity(0.6).padding(3)
+        
+            
     }
 }
