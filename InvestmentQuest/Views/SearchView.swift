@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 
 struct SearchView: View {
+    
     @State private var stockSymbol: String = ""
     
     @State private var showStockInfo: Bool = false
@@ -19,12 +20,15 @@ struct SearchView: View {
     
     @FocusState private var searchIsFocused: Bool
     
+    
+    @StateObject var vm = SearchStockViewModel()
+    
     var body: some View{
         NavigationView{
             VStack (alignment: .leading, spacing: 0){
-                SearchTextField()
+                SearchTextField(vm: vm)
                 
-                if(showStockInfo){
+                if(vm.shouldShowResults){
                     Divider().background(.white).padding(6)
                     Text("Stock information for: \(stockSymbol)").foregroundColor(.white)
                     VStack(alignment: .leading){
@@ -49,21 +53,12 @@ struct SearchView: View {
             
         }.navigationTitle("Search")
     }
-}
-
-struct SimpleList: View {
-    @State private var textItems: [String]
-    var body: some View {
-        VStack(alignment: .leading){
-            ForEach(textItems, id: \.self){ i in
-                Text(i).foregroundColor(.white)
-                Divider().background(.black).padding(0)
-            }
-        }.padding().background(Color(red: 100 / 255, green: 100 / 255, blue: 100 / 255)).cornerRadius(15)
-    }
+    
 }
 
 struct SearchTextField: View {
+    @StateObject var vm: SearchStockViewModel
+    
     @FocusState private var searchIsFocused: Bool
     @State var stockSymbol: String = ""
     @State private var validated: Bool = false
@@ -75,7 +70,7 @@ struct SearchTextField: View {
             }
             TextField("Enter Stock Symbol", text: $stockSymbol)
                 .onSubmit {
-                    validated = true
+                    vm.shouldShowResults = true
                 }
                 .focused($searchIsFocused)
                 .submitLabel(.search)
@@ -88,6 +83,7 @@ struct SearchTextField: View {
                 Button("Cancel") {
                     stockSymbol = ""
                     searchIsFocused.toggle()
+                    vm.shouldShowResults = false
                 }
             }
         }
@@ -102,7 +98,21 @@ struct SearchTextField: View {
     }
 }
 
+struct SimpleList: View {
+    @State var textItems: [String]
+    var body: some View {
+        VStack(alignment: .leading){
+            ForEach(textItems, id: \.self){ i in
+                Text(i).foregroundColor(.white)
+                Divider().background(.black).padding(0)
+            }
+        }.padding().background(Color(red: 100 / 255, green: 100 / 255, blue: 100 / 255)).cornerRadius(15)
+    }
+}
+
+
 struct InvestView: View {
+    
     @State private var email: String = ""
     @State private var fullName: String = ""
     @State private var dateOfBirth: Date = Date.now

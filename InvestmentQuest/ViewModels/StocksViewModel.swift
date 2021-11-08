@@ -9,7 +9,7 @@ import Foundation
 
 final class StocksViewModel: ObservableObject{
     @Published var selectedView: StockViews = StockViews.Search
-
+    
     enum StockViews: String {
         case Portfolio, Search, Settings
     }
@@ -17,4 +17,10 @@ final class StocksViewModel: ObservableObject{
     func SwitchView(itemView: StockViews) {
         selectedView = itemView
     }
+}
+
+final class SearchStockViewModel: ObservableObject{
+    @Published var stockSymbol: String = ""
+    @Published var shouldShowResults: Bool = false
+    
 }
