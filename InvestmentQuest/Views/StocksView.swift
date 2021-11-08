@@ -12,15 +12,13 @@ struct StocksView: View {
     var body: some View{
         NavigationView{
             VStack{
-                VStack{
-                    switch vm.selectedView {
-                    case .Settings:
-                        SettingsView()
-                    case .Search:
-                        SearchView()
-                    default:
-                        HomeView()
-                    }
+                switch vm.selectedView {
+                case .Settings:
+                    SettingsView()
+                case .Search:
+                    SearchView()
+                default:
+                    HomeView()
                 }
                 FooterView(vm:vm)
             }.padding(10).background(Color(red: 1.0, green: 1.0, blue: 1.0, opacity: 0.145)).foregroundColor(.white).preferredColorScheme(.dark)
