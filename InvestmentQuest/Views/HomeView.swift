@@ -15,7 +15,7 @@ struct HomeView: View {
                     .font(.title)
                     .fontWeight(.semibold)
                 Divider()
-                Text("Welcome to Investment Quest!\r\nThis app supposedly does things, that will help you out!\r\nSponsored by r/wallstreetbets (not really, but that would be cool")
+                Text("Welcome to Investment Quest!\r\nThis app supposedly does things, that will help you out!\r\nSponsored by r/wallstreetbets (not really, but that would be cool)")
                     .padding()
                     .font(.subheadline)
                 Spacer()
