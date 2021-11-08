@@ -32,7 +32,7 @@ struct StocksView: View {
                     case .Search:
                         SearchView()
                     default:
-                        Text("Welcome to Investment Quest!")
+                        HomeView()
                     }
                 }
                 VStack{

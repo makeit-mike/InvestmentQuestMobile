@@ -8,12 +8,12 @@
 import Foundation
 
 final class StocksViewModel: ObservableObject{
-    @Published var selectedView: StockViews = StockViews.Search
+    @Published var selectedView: StockViews = StockViews.Home
     
     enum StockViews: String {
-        case Portfolio, Search, Settings
+        case Portfolio, Search, Settings, Home
     }
-
+    
     func SwitchView(itemView: StockViews) {
         selectedView = itemView
     }
@@ -23,4 +23,8 @@ final class SearchStockViewModel: ObservableObject{
     @Published var stockSymbol: String = ""
     @Published var shouldShowResults: Bool = false
     
+    @Published var showStockInfo: Bool = false
+    @Published var stockPrice: Double = Double(round(100*(Double.random(in: 20.00 ..< 1000.00)) )/100)
+    @Published var stockGrowth: Double =  Double(round(1000*(Double.random(in: 0.00 ..< 1.00)))/1000)
+    @Published var stockShareHolders: Int = Int.random(in: 50 ..< 10000000)
 }

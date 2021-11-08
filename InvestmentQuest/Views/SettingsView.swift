@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
     var body: some View {
         NavigationView {
-            List {
-                ForEach(1...5, id: \.self) { index in
-                    HStack{
-                        Text("Item \(index)")
-                    }
-                }
+            VStack{
+                SimpleList(textItems: ["Notifications","Location","Fetch Results Hourly","Auto-Bid","Color theme","Icon","Contact","About" ] )
+                Spacer()
             }.background(Color(red: 1.0, green: 1.0, blue: 1.0, opacity: 0.145).edgesIgnoringSafeArea(.all))
         }.navigationTitle("Settings")
     }
