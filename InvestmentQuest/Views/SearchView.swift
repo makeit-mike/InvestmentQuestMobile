@@ -11,36 +11,29 @@ import Combine
 struct SearchView: View {
     @StateObject var vm = SearchStockViewModel()
     @FocusState private var searchIsFocused: Bool
-    @State private var showInvestView: Bool = false
     
     var body: some View{
         NavigationView{
             VStack (alignment: .leading, spacing: 0){
-                SearchTextField(vm: vm).padding(.bottom)
+                SearchTextField(vm: vm)
                 
                 if(vm.shouldShowResults){
-                    SimpleList(textItems: ["Stock Price: $\(vm.stockPrice)", "Estimated Growth: \(vm.stockGrowth)%", "Shareholders: \(vm.stockShareHolders)"])
-                    
-                    HStack {
-                        Spacer()
-                        Button(action: {self.showInvestView.toggle()}) {
-                            HStack{
-                                Image(systemName: "dollarsign.square.fill")
-                                Text("Invest")
-                            }
-                        }.foregroundColor(.blue)
-                            .padding()
-                            .sheet(isPresented: $showInvestView) {
-                                InvestView()
-                            }
-                    }
+                    StockSearchResults(vm: vm)
                 }
                 Spacer()
             }.background(Color(red: 1.0, green: 1.0, blue: 1.0, opacity: 0.145).edgesIgnoringSafeArea(.all))
         }.navigationTitle("Search")
     }
-    
 }
+
+struct SearchView_Previews: PreviewProvider {
+    static var previews: some View {
+        SearchView()
+    }
+}
+
+// ----------------------------------------------------------------------------------------------------------------
+// Subviews
 
 struct SearchTextField: View {
     @StateObject var vm: SearchStockViewModel
@@ -79,6 +72,7 @@ struct SearchTextField: View {
         .padding()
         .background(Color(.systemGray4))
         .cornerRadius(20)
+        .padding(.bottom)
     }
     
     func limitStockSymbol(_ upper: Int) {
@@ -86,10 +80,26 @@ struct SearchTextField: View {
     }
 }
 
-struct SearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchView()
-            .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
-            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(hue: 1.0, saturation: 0.005, brightness: 0.001)/*@END_MENU_TOKEN@*/)
+struct StockSearchResults: View {
+    @StateObject var vm: SearchStockViewModel
+    @State private var showInvestView: Bool = false
+    
+    var body: some View {
+        SimpleList(textItems: ["Stock Price: $\(vm.stockPrice)", "Estimated Growth: \(vm.stockGrowth)%", "Shareholders: \(vm.stockShareHolders)"])
+        
+        HStack {
+            Spacer()
+            Button(action: {self.showInvestView.toggle()}) {
+                HStack{
+                    Image(systemName: "dollarsign.square.fill")
+                    Text("Invest")
+                }
+            }.foregroundColor(.blue)
+                .padding()
+                .sheet(isPresented: $showInvestView) {
+                    InvestView(stockSymbol: vm.stockSymbol)
+                }
+        }
     }
 }
+

@@ -15,7 +15,7 @@ struct UserInfoTextInputView: View {
             Text(viewResponse)
             Spacer()
             TextField(" ", text: $text)
-                .background(Color.gray.opacity(0.5))
+                .background(.black.opacity(0.1))
                 .cornerRadius(7)
                 .frame(width: 150, alignment: .trailing)
         }.frame(alignment: .leading).padding()
@@ -27,3 +27,5 @@ struct UserInfoTextInput_Previews: PreviewProvider {
         UserInfoTextInputView()
     }
 }
+
+// ----------------------------------------------------------------------------------------------------------------

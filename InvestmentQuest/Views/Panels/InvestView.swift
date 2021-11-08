@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct InvestView: View {
+    
     @State private var email: String = ""
     @State private var fullName: String = ""
     @State private var dateOfBirth: Date = Date.now
@@ -31,17 +32,33 @@ struct InvestView: View {
                     "Date of Birth:",
                     selection: $dateOfBirth,
                     displayedComponents: [.date]
-                )
+                ).datePickerStyle(.compact)
             }.frame(alignment: .leading).padding(.leading)
             
             HStack{
-               
+                Text("Number of stock:").padding()
+                Spacer()
+                NumberPicker().padding(.trailing).padding(.leading).background(.black.opacity(0.1)).cornerRadius(10).frame(width: 170)
                 //Num shares use var
             }
             HStack{
                 // total cost = stockCost * numShares
             }
             Spacer()
+        }
+    }
+}
+
+struct NumberPicker: View {
+    @State private var number = 50
+
+    var body: some View {
+        VStack {
+            Picker("", selection: $number) {
+                ForEach(0...50, id: \.self) {
+                    Text("\(50-$0)")
+                }
+            }
         }
     }
 }
