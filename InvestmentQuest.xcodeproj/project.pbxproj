@@ -16,6 +16,15 @@
 		58FBAFC0273843E700F9407B /* StocksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBAFBF273843E700F9407B /* StocksView.swift */; };
 		58FBAFC1273843E700F9407B /* StocksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBAFBF273843E700F9407B /* StocksView.swift */; };
 		58FBAFC2273843E700F9407B /* StocksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBAFBF273843E700F9407B /* StocksView.swift */; };
+		58FBAFFF27388D8E00F9407B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBAFFE27388D8E00F9407B /* SearchView.swift */; };
+		58FBB00027388D8E00F9407B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBAFFE27388D8E00F9407B /* SearchView.swift */; };
+		58FBB00127388D8E00F9407B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBAFFE27388D8E00F9407B /* SearchView.swift */; };
+		58FBB00327388E7100F9407B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBB00227388E7100F9407B /* SettingsView.swift */; };
+		58FBB00427388E7100F9407B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBB00227388E7100F9407B /* SettingsView.swift */; };
+		58FBB00527388E7100F9407B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBB00227388E7100F9407B /* SettingsView.swift */; };
+		58FBB00727389DD500F9407B /* StocksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBB00627389DD500F9407B /* StocksViewModel.swift */; };
+		58FBB00827389DD500F9407B /* StocksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBB00627389DD500F9407B /* StocksViewModel.swift */; };
+		58FBB00927389DD500F9407B /* StocksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBB00627389DD500F9407B /* StocksViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +55,9 @@
 		58FBAF9C273842EA00F9407B /* InvestmentQuestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentQuestUITests.swift; sourceTree = "<group>"; };
 		58FBAF9E273842EA00F9407B /* InvestmentQuestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentQuestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		58FBAFBF273843E700F9407B /* StocksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksView.swift; sourceTree = "<group>"; };
+		58FBAFFE27388D8E00F9407B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		58FBB00227388E7100F9407B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		58FBB00627389DD500F9407B /* StocksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				58FBAFBF273843E700F9407B /* StocksView.swift */,
+				58FBAFFE27388D8E00F9407B /* SearchView.swift */,
+				58FBB00227388E7100F9407B /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,6 +156,7 @@
 		58FBAFC42738443500F9407B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				58FBB00627389DD500F9407B /* StocksViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -283,7 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58FBB00727389DD500F9407B /* StocksViewModel.swift in Sources */,
 				58FBAFC0273843E700F9407B /* StocksView.swift in Sources */,
+				58FBB00327388E7100F9407B /* SettingsView.swift in Sources */,
+				58FBAFFF27388D8E00F9407B /* SearchView.swift in Sources */,
 				58FBAF82273842E900F9407B /* InvestmentQuestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +310,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58FBB00827389DD500F9407B /* StocksViewModel.swift in Sources */,
 				58FBAFC1273843E700F9407B /* StocksView.swift in Sources */,
+				58FBB00427388E7100F9407B /* SettingsView.swift in Sources */,
+				58FBB00027388D8E00F9407B /* SearchView.swift in Sources */,
 				58FBAF93273842EA00F9407B /* InvestmentQuestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,9 +322,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58FBB00527388E7100F9407B /* SettingsView.swift in Sources */,
+				58FBB00127388D8E00F9407B /* SearchView.swift in Sources */,
 				58FBAF9F273842EA00F9407B /* InvestmentQuestUITestsLaunchTests.swift in Sources */,
 				58FBAFC2273843E700F9407B /* StocksView.swift in Sources */,
 				58FBAF9D273842EA00F9407B /* InvestmentQuestUITests.swift in Sources */,
+				58FBB00927389DD500F9407B /* StocksViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
