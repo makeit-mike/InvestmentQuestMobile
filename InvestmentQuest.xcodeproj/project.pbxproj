@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58B6FFBA273A21CF009156DA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B6FFB9273A21CF009156DA /* SignUpView.swift */; };
+		58B6FFBB273A21CF009156DA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B6FFB9273A21CF009156DA /* SignUpView.swift */; };
+		58B6FFBC273A21CF009156DA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B6FFB9273A21CF009156DA /* SignUpView.swift */; };
+		58B6FFBE273A22BF009156DA /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B6FFBD273A22BF009156DA /* LogInView.swift */; };
+		58B6FFBF273A22BF009156DA /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B6FFBD273A22BF009156DA /* LogInView.swift */; };
+		58B6FFC0273A22BF009156DA /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B6FFBD273A22BF009156DA /* LogInView.swift */; };
+		58B6FFC3273A23A6009156DA /* Authenticate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B6FFC2273A23A6009156DA /* Authenticate.swift */; };
+		58B6FFC4273A23A6009156DA /* Authenticate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B6FFC2273A23A6009156DA /* Authenticate.swift */; };
+		58B6FFC5273A23A6009156DA /* Authenticate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B6FFC2273A23A6009156DA /* Authenticate.swift */; };
+		58B6FFC7273A2A2F009156DA /* AuthenticationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B6FFC6273A2A2F009156DA /* AuthenticationButtonView.swift */; };
+		58B6FFC8273A2A2F009156DA /* AuthenticationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B6FFC6273A2A2F009156DA /* AuthenticationButtonView.swift */; };
+		58B6FFC9273A2A2F009156DA /* AuthenticationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B6FFC6273A2A2F009156DA /* AuthenticationButtonView.swift */; };
 		58FBAF82273842E900F9407B /* InvestmentQuestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FBAF81273842E900F9407B /* InvestmentQuestApp.swift */; };
 		58FBAF86273842EA00F9407B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58FBAF85273842EA00F9407B /* Assets.xcassets */; };
 		58FBAF89273842EA00F9407B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58FBAF88273842EA00F9407B /* Preview Assets.xcassets */; };
@@ -78,6 +90,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		58B6FFB9273A21CF009156DA /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		58B6FFBD273A22BF009156DA /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		58B6FFC2273A23A6009156DA /* Authenticate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticate.swift; sourceTree = "<group>"; };
+		58B6FFC6273A2A2F009156DA /* AuthenticationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationButtonView.swift; sourceTree = "<group>"; };
 		58FBAF7E273842E900F9407B /* InvestmentQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestmentQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FBAF81273842E900F9407B /* InvestmentQuestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentQuestApp.swift; sourceTree = "<group>"; };
 		58FBAF85273842EA00F9407B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,6 +145,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58B6FFC1273A238A009156DA /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				58B6FFC2273A23A6009156DA /* Authenticate.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		58FBAF75273842E900F9407B = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +176,7 @@
 		58FBAF80273842E900F9407B /* InvestmentQuest */ = {
 			isa = PBXGroup;
 			children = (
+				58B6FFC1273A238A009156DA /* Authentication */,
 				58FBAFC52738444100F9407B /* Models */,
 				58FBAFC42738443500F9407B /* ViewModels */,
 				58FBAFC32738442300F9407B /* Views */,
@@ -199,6 +224,8 @@
 				58FBB0242738BA5E00F9407B /* PortfolioView.swift */,
 				58FBB0312738CAE000F9407B /* HeaderView.swift */,
 				58FBB0352738CAE700F9407B /* FooterView.swift */,
+				58B6FFB9273A21CF009156DA /* SignUpView.swift */,
+				58B6FFBD273A22BF009156DA /* LogInView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,6 +253,7 @@
 			children = (
 				58FBB00F2738B5E600F9407B /* UserInfoTextInputView.swift */,
 				58FBB01C2738B8DD00F9407B /* SimpleList.swift */,
+				58B6FFC6273A2A2F009156DA /* AuthenticationButtonView.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -381,8 +409,10 @@
 				58FBB0362738CAE700F9407B /* FooterView.swift in Sources */,
 				58FBB03A2738CDA100F9407B /* ColorValue.swift in Sources */,
 				58FBB00B2738B41F00F9407B /* InvestView.swift in Sources */,
+				58B6FFC7273A2A2F009156DA /* AuthenticationButtonView.swift in Sources */,
 				58FBAFC0273843E700F9407B /* StocksView.swift in Sources */,
 				58FBB0212738BA1400F9407B /* HomeView.swift in Sources */,
+				58B6FFBE273A22BF009156DA /* LogInView.swift in Sources */,
 				58FBB0102738B5E600F9407B /* UserInfoTextInputView.swift in Sources */,
 				58FBB00327388E7100F9407B /* SettingsView.swift in Sources */,
 				58FBAFFF27388D8E00F9407B /* SearchView.swift in Sources */,
@@ -391,7 +421,9 @@
 				58FBB0252738BA5E00F9407B /* PortfolioView.swift in Sources */,
 				58FBB01D2738B8DD00F9407B /* SimpleList.swift in Sources */,
 				58FBB0192738B64B00F9407B /* UserInfoTextInputVM.swift in Sources */,
+				58B6FFC3273A23A6009156DA /* Authenticate.swift in Sources */,
 				58FBB03E2738D98800F9407B /* HSpacer.swift in Sources */,
+				58B6FFBA273A21CF009156DA /* SignUpView.swift in Sources */,
 				58FBB0322738CAE000F9407B /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,10 +433,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				58FBB00827389DD500F9407B /* StocksViewModel.swift in Sources */,
+				58B6FFBB273A21CF009156DA /* SignUpView.swift in Sources */,
 				58FBB0372738CAE700F9407B /* FooterView.swift in Sources */,
 				58FBB03B2738CDA100F9407B /* ColorValue.swift in Sources */,
+				58B6FFC8273A2A2F009156DA /* AuthenticationButtonView.swift in Sources */,
 				58FBB00C2738B41F00F9407B /* InvestView.swift in Sources */,
 				58FBAFC1273843E700F9407B /* StocksView.swift in Sources */,
+				58B6FFBF273A22BF009156DA /* LogInView.swift in Sources */,
 				58FBB0222738BA1400F9407B /* HomeView.swift in Sources */,
 				58FBB0112738B5E600F9407B /* UserInfoTextInputView.swift in Sources */,
 				58FBB00427388E7100F9407B /* SettingsView.swift in Sources */,
@@ -413,6 +448,7 @@
 				58FBB02F2738CA1100F9407B /* StockModel.swift in Sources */,
 				58FBB0262738BA5E00F9407B /* PortfolioView.swift in Sources */,
 				58FBB01E2738B8DD00F9407B /* SimpleList.swift in Sources */,
+				58B6FFC4273A23A6009156DA /* Authenticate.swift in Sources */,
 				58FBB01A2738B64B00F9407B /* UserInfoTextInputVM.swift in Sources */,
 				58FBB03F2738D98800F9407B /* HSpacer.swift in Sources */,
 				58FBB0332738CAE000F9407B /* HeaderView.swift in Sources */,
@@ -431,14 +467,18 @@
 				58FBB00127388D8E00F9407B /* SearchView.swift in Sources */,
 				58FBB01F2738B8DD00F9407B /* SimpleList.swift in Sources */,
 				58FBB03C2738CDA100F9407B /* ColorValue.swift in Sources */,
+				58B6FFC5273A23A6009156DA /* Authenticate.swift in Sources */,
 				58FBB0232738BA1400F9407B /* HomeView.swift in Sources */,
 				58FBAF9F273842EA00F9407B /* InvestmentQuestUITestsLaunchTests.swift in Sources */,
+				58B6FFC0273A22BF009156DA /* LogInView.swift in Sources */,
 				58FBB0272738BA5E00F9407B /* PortfolioView.swift in Sources */,
 				58FBAFC2273843E700F9407B /* StocksView.swift in Sources */,
 				58FBB01B2738B64B00F9407B /* UserInfoTextInputVM.swift in Sources */,
 				58FBB0402738D98800F9407B /* HSpacer.swift in Sources */,
 				58FBAF9D273842EA00F9407B /* InvestmentQuestUITests.swift in Sources */,
+				58B6FFC9273A2A2F009156DA /* AuthenticationButtonView.swift in Sources */,
 				58FBB00927389DD500F9407B /* StocksViewModel.swift in Sources */,
+				58B6FFBC273A21CF009156DA /* SignUpView.swift in Sources */,
 				58FBB0342738CAE000F9407B /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

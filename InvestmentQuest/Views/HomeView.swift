@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var showSignUpView = false
+    @State private var showLogInView  = false
+
     var body: some View {
         NavigationView{
             VStack{
@@ -19,10 +22,25 @@ struct HomeView: View {
                     .padding()
                     .font(.subheadline)
                 Spacer()
+                HStack {
+                    Button(action: {self.showSignUpView.toggle()}) {
+                        Text("Sign Up")
+                    }.padding().sheet(isPresented: $showSignUpView) {
+                        SignUpView(viewShowing: self.$showSignUpView)
+                    }
+                    
+                    Button(action: {self.showLogInView.toggle()}) {
+                        Text("Log In")
+                    }.padding().sheet(isPresented: $showLogInView) {
+                        LogInView(viewShowing: self.$showLogInView)
+                    }
+                }
+                Spacer()
             }.background(Stocks_GrayBackground)
         }
     }
 }
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
